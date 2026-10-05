@@ -1,0 +1,25 @@
+[EDIT-MAP] المرحلة 5 مكتملة — 8 تقارير + LoginLog UI | VERSION = 14
+
+server.py:
+  - VERSION = 14
+  - emp_name_maps / resolve_name     : اسم الموظف بدل الكود
+  - OTYPE_AR / PPLACE_AR
+  - report_weekly                    : أسبوعي (أيام + أنواع)
+  - report_monthly                   : شهري + مقارنة % بالشهر السابق
+  - report_riders                    : مندوب (أوردرات/مسلّم/مرفوض/تحصيل/متوسط وقت/نجاح/فروق شفتات)
+  - report_returns_adv               : مرتجعات (قائمة + حسب كاشير + حسب سبب)
+  - report_employees                 : كل موظف (عدد + مبلغ + أنواع)
+  - report_by_otype                  : C/V/A/D
+  - report_by_payplace               : C/V/A/D/O
+  - report_cash_collection           : فرع / مناديب / أونلاين + فرق محاسبة الشفتات
+  - report_advanced(kind,...)        : موجّه الكل
+  - GET /api/report/advanced?type=&from=&to=&month=
+
+pos_istakoza.html:
+  - pos-ui-version = 14
+  - خيارات التقارير a_weekly..a_cash
+  - renderAReport() لكل الأنواع
+  - loginLogModal + openLoginLog()
+
+types المدعومة في API:
+  weekly | monthly | riders | returns | employees | otype | payplace | cash
